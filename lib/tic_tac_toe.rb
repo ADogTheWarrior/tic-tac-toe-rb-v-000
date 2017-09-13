@@ -146,11 +146,8 @@ end
 
 def play(board)
   turn_count = 0
-  until turn_count == 9
+  while turn_count < 9 || over?
     turn(board)
     turn_count += 1
-    if over?
-      break
-    end
   end
 end
